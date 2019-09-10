@@ -47,20 +47,6 @@ public class Item {
 		
 	}
 	
-	/**
-	 * 4 overloaded constructor for use in option4
-	 * @param itemID
-	 * @param name
-	 * @param supplier
-	 * @param supplierInfo
-	 */
-	public Item(String itemID, String name, String supplier, String supplierInfo) {
-		this.itemID = itemID;
-		this.name = name;
-		this.supplier = supplier;
-		this.supplierInfo = supplierInfo;
-	}
-	
 //Getter and Setter pairs
 //Getter to fetch a required information of an item	
 //Setter to set a value of an item ,i.e can be use to change any value of the attributes of an item	
@@ -193,15 +179,15 @@ public class Item {
 	/**
 	 * totalItem will display count of number of items created when call
 	 */
-	public static void totalItem() {
-		  System.out.print("Number of items currently in store: " + count);
+	public static int totalItem() {
+		  return count;
 		}
 	
 	/**
 	 * Gives all details of an item when called
 	 */
 	public  String toString() {
-		return ("Item Details:- " + "\n" + "Item ID: " + this.getItemID() + "\n" + "Item: " + this.getName() +
+		return ( "Item ID: " + this.getItemID() + "\n" + "Item: " + this.getName() +
 				"\n" + "Category: " + this.getItemcat() + "\n" + "Description: " + this.getDescription() + "\n" +
 				"Price: " + this.getPrice() + "\n" + "Quantity: " + this.getQuantity() + "\n" +
 				"From Supplier: " + this.getSupplier() + "\n" + "Supplier Information: " + this.getSupplierInfo());
